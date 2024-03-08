@@ -1,4 +1,18 @@
-.contnet1 {
-  display: flex;
-  justify-content: center;
+.main {
+  border: 2px rgb(14, 255, 62) solid;
+  height: 847px;
+}
+
+.slogan {
+  margin: 0px;
+  font-size: 38px;
+  font-weight: 700;
+  border: 1px red solid;
+  align-self: center;
+}
+.text {
+  align-self: center;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px red solid;
 }

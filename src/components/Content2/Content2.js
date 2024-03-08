@@ -1,3 +1,4 @@
+// "use client"
 import { Button, Flex, ConfigProvider, Space } from "antd"
 
 import { Layout } from "antd"
