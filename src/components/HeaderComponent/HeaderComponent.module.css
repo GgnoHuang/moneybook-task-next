@@ -1,5 +1,12 @@
 .header {
-  text-align: center;
   height: 100px;
   background-color: #f8d57e;
+}
+.landingpage {
+  line-height: 27.3px;
+  font-size: 21px;
+  font-weight: 400;
+}
+.landing {
+  font-weight: 700;
 }
