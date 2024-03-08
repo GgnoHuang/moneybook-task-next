@@ -9,22 +9,37 @@
 
 .iphoneContainer {
   /* background-color: red; */
-  border: 3px blue solid;
+  border: 0px rgb(26, 194, 4) solid;
+  width: 540px;
+  height: 450px;
+  position: relative;
 }
 
 .iphoneBgCircle {
   border-radius: 50%;
-
   background-color: #f8d57e;
-
   width: 378.63px;
   height: 378.63px;
   position: absolute;
+  left: 91px;
+  top: 32.57px;
+}
+.shine {
+  z-index: 50;
+  position: absolute;
+  top: 96px;
+  left: 41px;
+}
+.shineWhite {
+  z-index: 50;
+  position: absolute;
+  top: 241px;
+  left: 405px;
 }
 
 .verticalContainer {
   width: 570px;
-  border: 3px blue solid;
+  border: 0px blue solid;
 }
 
 .slogan {
@@ -32,12 +47,12 @@
   font-size: 38px;
   font-weight: 700;
   line-height: 49.4px;
-  border: 1px red solid;
+  border: 0px red solid;
 }
 
 .slogan2 {
   margin: 20px 0px 40px 0px;
   font-size: 21px;
   line-height: 31.5px;
-  border: 1px red solid;
+  border: 0px red solid;
 }

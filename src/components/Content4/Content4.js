@@ -27,19 +27,24 @@ export default function Content4() {
         <Flex
           justify={"center"}
           vertical={true}
-          style={{ border: "3px yellow solid", height: "93px" }}
+          style={{ border: "0px yellow solid", height: "93px" }}
         >
-          <p className={styles.slogan}>Discover our latest work</p>
+          <p className={styles.slogan}>Real Stories from Satisfied Customers</p>
           <p className={styles.text}>
-            Explore our portfolio and see the latest and greatest projects that
-            we've brought to life.
+            See how our landing page ui kit is making an impact.
           </p>
         </Flex>
-
-        <Flex gap="30px">
-          <CardBox />
-
-          <MemberCard />
+        <Flex gap={30}>
+          <MemberCard
+            imgsrc={"/member_1.png"}
+            memberName="Lauren M."
+            memberPosition="UI Designer @Boo"
+          />
+          <MemberCard
+            imgsrc={"/member_2.png"}
+            memberName="David B."
+            memberPosition="Lead Designer @Creative"
+          />
         </Flex>
       </Flex>
     </ConfigProvider>

@@ -1,5 +1,6 @@
 // "use client"
 import { Button, Flex, ConfigProvider, Space } from "antd"
+import Image from "next/image"
 
 import { Layout } from "antd"
 
@@ -25,14 +26,22 @@ export default function Content2() {
         align={"center"}
       >
         <div className={styles.iphoneBgCircle}></div>
-
+        <Image
+          className={styles.shine}
+          width={100.16}
+          height={126.07}
+          src={"/shine.png"}
+        />
+        <Image
+          className={styles.shineWhite}
+          width={50.5}
+          height={63}
+          src={"/shineWhite.png"}
+        />
         <Iphone transform="scale(0.733)" display={"none"} />
       </Flex>
 
-      <Flex
-        vertical={true}
-        style={{ width: "570px", border: "3px blue solid" }}
-      >
+      <Flex vertical={true} style={{ width: "570px", border: "0px red solid" }}>
         <p className={styles.slogan}>Our features</p>
         <p className={styles.slogan2}>
           Few good reasons why you should use Anima Landing Page Ui Kit to make

@@ -26,7 +26,7 @@ export default function Content3() {
         <Flex
           justify={"center"}
           vertical={true}
-          style={{ border: "3px yellow solid", height: "93px" }}
+          style={{ border: "0px yellow solid", height: "93px" }}
         >
           <p className={styles.slogan}>Discover our latest work</p>
           <p className={styles.text}>
