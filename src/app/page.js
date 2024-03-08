@@ -16,6 +16,7 @@ import {
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent"
 import Content1 from "../components/Content1/Content1"
 import Content2 from "../components/Content2/Content2"
+import Content3 from "../components/Content3/Content3"
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
           <HeaderComponent />
           <Content1 />
           <Content2 />
+          <Content3 />
 
           <Footer style={footerStyle}>Footer</Footer>
         </Layout>
