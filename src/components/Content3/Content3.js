@@ -1,54 +1,46 @@
-import { Button, Flex, ConfigProvider, Space } from "antd"
-import { Layout } from "antd"
-const { Content } = Layout
+// "use client"
+import { Layout, Button, Flex, ConfigProvider, Space, Card } from "antd"
+const { Meta } = Card
+
 import GetstartBtn from "../GetstartBtn/GetstartBtn"
-import HowitworkBtn from "../HowitworkBtn/HowitworkBtn"
+import CardBox from "../CardBox/CardBox"
 
 import styles from "./Content3.module.css"
 
 export default function Content1() {
   return (
-    <>
-      <Content className={styles.contnet1} style={{ border: "1px red solid" }}>
+    <ConfigProvider
+      theme={{
+        components: {
+          Button: {},
+        },
+      }}
+    >
+      <Flex
+        justify={"center"}
+        align={"center"}
+        vertical={true}
+        className={styles.main}
+        gap={"60px"}
+      >
         <Flex
           justify={"center"}
           vertical={true}
-          style={{ width: "620px", border: "3px blue solid" }}
+          style={{ border: "3px yellow solid", height: "93px" }}
         >
-          <p
-            style={{
-              margin: "0px",
-              fontSize: "67px",
-              fontWeight: "700",
-              border: "1px red solid",
-            }}
-          >
-            Create Engaging Landing Pages
+          <p className={styles.slogan}>Discover our latest work</p>
+          <p className={styles.text}>
+            Explore our portfolio and see the latest and greatest projects that
+            we've brought to life.
           </p>
-          <p
-            style={{
-              margin: "20px 0px 40px 0px",
-              fontSize: "21px",
-              border: "1px red solid",
-            }}
-          >
-            Build beautiful landing pages in record time with Anima’s Landing
-            Page UI kit for Figma. No code required!
-          </p>
-          <Flex gap="18px">
-            <GetstartBtn />
-            <HowitworkBtn
-              width="202px"
-              backgroundColor="#FFFFFF"
-              color="#009379"
-              fontSize="16px"
-            />
-          </Flex>
-          {/* <Iphone /> */}
         </Flex>
 
-        {/* <Iphone transform="scale(0.733)" display={"none"} /> */}
-      </Content>
-    </>
+        <Flex gap="30px">
+          <CardBox />
+          <CardBox />
+          <CardBox />
+        </Flex>
+      </Flex>
+    </ConfigProvider>
   )
 }

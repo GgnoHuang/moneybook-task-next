@@ -1,3 +1,4 @@
+// "use client"
 import { Button, Flex, ConfigProvider, Space } from "antd"
 
 import { Layout } from "antd"
@@ -41,10 +42,12 @@ export default function Content1() {
             <Flex gap="18px">
               <GetstartBtn />
               <HowitworkBtn
+                text={"How it works"}
                 width="202px"
                 backgroundColor="#FFFFFF"
                 color="#009379"
                 fontSize="16px"
+                border="1px #009379 solid"
               />
             </Flex>
             {/* <Iphone /> */}
