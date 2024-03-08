@@ -49,7 +49,8 @@ export default function Content1() {
             </Flex>
             {/* <Iphone /> */}
           </Flex>
-          <Iphone />
+          <Iphone top="24px" />
+          {/* <Iphone transform="scale(0.733)" display={"none"} /> */}
         </Flex>
       </Content>
     </>

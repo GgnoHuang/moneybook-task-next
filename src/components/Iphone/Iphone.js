@@ -1,80 +1,21 @@
 import Image from "next/image"
+import styles from "./Iphone.module.css"
 
-export default function Iphone({ transform = "scale(1)", display }) {
+export default function Iphone({ transform = "scale(1)", display, top }) {
   return (
     <div
+      className={styles.container}
       style={{
+        top: top,
         transform: transform,
-        display: "flex",
-        justifyContent: "center",
-        position: "relative",
-        top: "24px",
-        border: "red solid 2px",
-        zIndex: "10",
       }}
     >
-      <div
-        style={{
-          width: "304px",
-          height: "581px",
-          backgroundColor: "#2D2D2D",
-          borderRadius: "53.48px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          padding: "12px",
-          position: "relative",
-          // zIndex: "16",
-        }}
-      >
-        <div
-          style={{
-            width: "91.7px",
-            height: "19.86px",
-            backgroundColor: "#2D2D2D",
-            borderRadius: "50px",
-            position: "absolute",
-            top: "20px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "3px",
-            // zIndex: "10",
-          }}
-        >
-          <div
-            style={{
-              width: "41.26px",
-              height: "3.06px",
-              backgroundColor: "#CFCFCF",
-              borderRadius: "25px",
-              position: "relative",
-              // zIndex: "10",
-            }}
-          ></div>
-          <div
-            style={{
-              width: "3.06px",
-              height: "3.06px",
-              backgroundColor: "#CFCFCF",
-              borderRadius: "50%",
-              position: "relative",
-            }}
-          ></div>
+      <div className={styles.iphonebody}>
+        <div className={styles.dynamicIsland}>
+          <div className={styles.earpiece}></div>
+          <div className={styles.camera}></div>
         </div>
-        <div
-          style={{
-            width: "100%",
-            flexGrow: 1,
-            backgroundColor: "#fff",
-            borderRadius: "45.84px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontFamily: "Arial, sans-serif",
-            overflow: "hidden",
-          }}
-        >
+        <div className={styles.iphoneScreen}>
           <Image
             src="/dd1e32d37720da772c1a3f47dd40c313.png"
             width={281}
@@ -83,15 +24,8 @@ export default function Iphone({ transform = "scale(1)", display }) {
         </div>
       </div>
       <div
+        className={styles.iphoneBGwhite}
         style={{
-          position: "absolute",
-          top: "169px",
-          width: "420px",
-          height: "420px",
-          backgroundColor: "#ffffff",
-          borderRadius: "127px",
-          zIndex: "-1",
-          border: "red 1px solid",
           display: display,
         }}
       ></div>

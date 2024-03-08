@@ -7,55 +7,54 @@ const { Content } = Layout
 import styles from "./Content2.module.css"
 import GetstartBtn from "../GetstartBtn/GetstartBtn"
 import HowitworkBtn from "../HowitworkBtn/HowitworkBtn"
+import UsualBtn from "../UsualBtn/UsualBtn"
 import Iphone from "../Iphone/Iphone"
 
 export default function Content2() {
   return (
     <Flex
-      className={styles.contnet2}
+      className={styles.content2body}
       align={"center"}
       justify={"center"}
       gap={60}
-      style={{
-        backgroundColor: "#F8F9FF",
-        backgroundColor: "red",
-        zIndex: "100",
-      }}
     >
-      <Iphone transform="scale(0.733)" display={"none"} />
+      <Flex
+        className={styles.iphoneContainer}
+        justify={"center"}
+        align={"center"}
+      >
+        <div className={styles.iphoneBgCircle}></div>
+
+        <Iphone transform="scale(0.733)" display={"none"} />
+      </Flex>
+
       <Flex
         vertical={true}
-        style={{ width: "620px", border: "3px blue solid" }}
+        style={{ width: "570px", border: "3px blue solid" }}
       >
-        <p
-          style={{
-            margin: "0px",
-            fontSize: "38px",
-            fontWeight: "700",
-            border: "1px red solid",
-            lineHeight: "49.4px",
-          }}
-        >
-          Our features
-        </p>
-        <p
-          style={{
-            margin: "20px 0px 40px 0px",
-            fontSize: "21px",
-            border: "1px red solid",
-          }}
-        >
+        <p className={styles.slogan}>Our features</p>
+        <p className={styles.slogan2}>
           Few good reasons why you should use Anima Landing Page Ui Kit to make
           your own pages.
         </p>
-        <Flex gap="18px">
-          <GetstartBtn />
-          <HowitworkBtn
-            width="202px"
-            backgroundColor="#FFFFFF"
-            color="#009379"
-            fontSize="16px"
-          />
+        <Flex gap="20px" wrap="wrap">
+          <Flex gap="20px">
+            <UsualBtn textcontent={"Fast building"} imgSrc={"/UFO_icon.png"} />
+            <UsualBtn
+              textcontent={"Easy to edit"}
+              imgSrc={"/MagicWand_icon.png"}
+            />
+          </Flex>
+          <Flex gap="20px">
+            <UsualBtn
+              textcontent={"Responsiveness"}
+              imgSrc={"/BoundingBox_icon.png"}
+            />
+            <UsualBtn
+              textcontent={"No code needed"}
+              imgSrc={"/Package_icon.png"}
+            />
+          </Flex>
         </Flex>
         {/* <Iphone /> */}
       </Flex>
