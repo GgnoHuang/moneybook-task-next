@@ -1,18 +1,36 @@
+import React, { useState, useEffect } from "react"
+
 // "use client"
 import { Button, Flex, ConfigProvider, Space } from "antd"
 import Image from "next/image"
 
 import { Layout } from "antd"
 
-const { Content } = Layout
-
 import styles from "./Content2.module.css"
-import GetstartBtn from "../GetstartBtn/GetstartBtn"
-import HowitworkBtn from "../HowitworkBtn/HowitworkBtn"
+
 import UsualBtn from "../UsualBtn/UsualBtn"
 import Iphone from "../Iphone/Iphone"
 
 export default function Content2() {
+  const [image, setImage] = useState(null)
+  useEffect(() => {
+    const headers = new Headers({
+      "Content-Type": "application/json",
+      "x-api-key": "DEMO-API-KEY",
+    })
+    fetch("https://api.thecatapi.com/v1/images/search", {
+      method: "GET",
+      headers: headers,
+      redirect: "follow",
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        setImage(result[0].url)
+      })
+      .catch((error) => {
+        console.log("error", error)
+      })
+  }, [])
   return (
     <Flex
       className={styles.content2body}
@@ -38,7 +56,7 @@ export default function Content2() {
           height={63}
           src={"/shineWhite.png"}
         />
-        <Iphone transform="scale(0.733)" display={"none"} />
+        <Iphone transform="scale(0.733)" display={"none"} fetchImg={image} />
       </Flex>
 
       <Flex vertical={true} style={{ width: "570px", border: "0px red solid" }}>
