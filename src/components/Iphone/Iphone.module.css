@@ -4,8 +4,10 @@
   justify-content: center;
   position: relative;
   /* top: 24px; */
-  border: red solid 2px;
+  border: red solid 0px;
   z-index: 10;
+  width: 450px;
+  /* height: 450px; */
 }
 
 .iphonebody {
@@ -63,5 +65,5 @@
   background-color: #ffffff;
   border-radius: 127px;
   z-index: -1;
-  border: red 1px solid;
+  border: red 0px solid;
 }
