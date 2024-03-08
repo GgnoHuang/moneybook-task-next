@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react"
+
 import { Rate, Layout, Button, Flex, ConfigProvider, Space, Card } from "antd"
 const { Meta } = Card
 
@@ -11,6 +13,26 @@ export default function MemberCard({
   rate,
   imgsrc,
 }) {
+  const [image, setImage] = useState(null)
+  useEffect(() => {
+    const headers = new Headers({
+      "Content-Type": "application/json",
+      "x-api-key": "DEMO-API-KEY",
+    })
+    fetch("https://api.thecatapi.com/v1/images/search", {
+      method: "GET",
+      headers: headers,
+      redirect: "follow",
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        setImage(result[0].url)
+      })
+      .catch((error) => {
+        console.log("error", error)
+      })
+  }, [])
+
   return (
     <ConfigProvider
       theme={{
@@ -35,7 +57,7 @@ export default function MemberCard({
                 border: "0px solid red",
               }}
               alt="example"
-              src={imgsrc}
+              src={image ? image : imgsrc}
             />
             <Flex justify={"center"} vertical={true}>
               <span className={styles.memberName}>{memberName}</span>

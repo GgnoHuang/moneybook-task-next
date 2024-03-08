@@ -1,7 +1,12 @@
 import Image from "next/image"
 import styles from "./Iphone.module.css"
 import { Image as AntdImage } from "antd"
-export default function Iphone({ transform = "scale(1)", display, top }) {
+export default function Iphone({
+  transform = "scale(1)",
+  display,
+  top,
+  fetchImg = "/dd1e32d37720da772c1a3f47dd40c313.png",
+}) {
   return (
     <div
       className={styles.container}
@@ -15,12 +20,14 @@ export default function Iphone({ transform = "scale(1)", display, top }) {
           <div className={styles.earpiece}></div>
           <div className={styles.camera}></div>
         </div>
-        <div className={styles.iphoneScreen}>
+        <div className={styles.iphoneScreen} style={{}}>
           <AntdImage
-            width={281}
-            height={557}
             alt="example"
-            src="/dd1e32d37720da772c1a3f47dd40c313.png"
+            src={fetchImg}
+            style={{
+              height: "557px",
+              width: "auto",
+            }}
           />
         </div>
       </div>

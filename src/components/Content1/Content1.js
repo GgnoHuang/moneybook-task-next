@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react"
+
 // "use client"
 import { Button, Flex, ConfigProvider, Space } from "antd"
 import Image from "next/image"
@@ -12,6 +14,36 @@ import HowitworkBtn from "../HowitworkBtn/HowitworkBtn"
 import Iphone from "../Iphone/Iphone"
 
 export default function Content1() {
+  const [image, setImage] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const headers = new Headers({
+      "Content-Type": "application/json",
+      "x-api-key": "DEMO-API-KEY",
+    })
+
+    const requestOptions = {
+      method: "GET",
+      headers: headers,
+      redirect: "follow",
+    }
+
+    setLoading(true)
+    fetch("https://api.thecatapi.com/v1/images/search", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        setImage(result[0].url)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log("error", error)
+        setError(error)
+        setLoading(false)
+      })
+  }, [])
+
   return (
     <>
       <Content className={styles.contnet1} style={{ border: "0px red solid" }}>
@@ -53,7 +85,7 @@ export default function Content1() {
             </Flex>
             {/* <Iphone /> */}
           </Flex>
-          <Iphone top="24px" />
+          <Iphone top="24px" fetchImg={image} />
           {/* <Iphone transform="scale(0.733)" display={"none"} /> */}
         </Flex>
       </Content>
