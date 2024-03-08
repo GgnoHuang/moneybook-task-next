@@ -1,9 +1,9 @@
 import { Layout, Button, Flex, ConfigProvider, Space, Card } from "antd"
 const { Meta } = Card
 import { Image } from "antd"
-import styles from "./CardBox.module.css"
+import styles from "./MemberCard.module.css"
 
-export default function CardBox() {
+export default function MemberCard() {
   return (
     <ConfigProvider
       theme={{

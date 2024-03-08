@@ -5,9 +5,10 @@ const { Meta } = Card
 import GetstartBtn from "../GetstartBtn/GetstartBtn"
 import CardBox from "../CardBox/CardBox"
 
-import styles from "./Content3.module.css"
+import styles from "./Content4.module.css"
+import MemberCard from "../MemberCard/MemberCard"
 
-export default function Content3() {
+export default function Content4() {
   return (
     <ConfigProvider
       theme={{
@@ -37,8 +38,8 @@ export default function Content3() {
 
         <Flex gap="30px">
           <CardBox />
-          <CardBox />
-          <CardBox />
+
+          <MemberCard />
         </Flex>
       </Flex>
     </ConfigProvider>
