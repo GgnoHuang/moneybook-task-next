@@ -36,11 +36,13 @@ export default function Content4() {
         </Flex>
         <Flex gap={60} vertical={isMobileW ? true : false}>
           <MemberCard
+            comment="Anima’s Landing Page UI Kit has become a staple in my design toolkit. This kit has everything I need to get the job done quickly and efficiently."
             imgsrc={"/loading.gif"}
             memberName="Lauren M."
             memberPosition="UI Designer @Boo"
           />
           <MemberCard
+            comment="The Landing Page UI Kit has been a game changer. The pre-designed components and templates have helped us deliver projects faster!"
             imgsrc={"/loading.gif"}
             memberName="David B."
             memberPosition="Lead Designer @Creative"
