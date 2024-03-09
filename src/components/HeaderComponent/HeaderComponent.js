@@ -16,48 +16,55 @@ export default function HeaderComponent() {
   }))
   return (
     <>
-      <Header
-        className={styles.header}
-        style={{ height: "100px", backgroundColor: "#F8D57E" }}
-      >
-        {/* <Flex vertical={true}></Flex> */}
-        <Flex
-          justify={"space-between"}
-          vertical={false}
-          style={{ height: "100%" }}
-        >
-          <Flex align={"center"} className={styles.landingpage}>
+      <div className={styles.header}>
+        {isMobileW ? (
+          <div className={styles.mobileHeader}>
             <Image
               style={{ marginRight: "6px" }}
               src="/Logo Mark.svg"
               width={32}
               height={32}
             />
-            <p className={styles.landing}> Landing</p>
-            Page
-          </Flex>
+            <GetstartBtn getStartIcon="arrow" />
+          </div>
+        ) : (
+          <Flex
+            className={styles.container}
+            justify={"space-between"}
+            vertical={false}
+            style={{
+              height: "100%",
 
-          <Flex align={"center"} gap={"50px"}>
-            <Button
-              type="text"
-              style={{
-                color: "#009379",
-              }}
-            >
-              Contact
-            </Button>
-            <Flex gap={"20px"}>
-              <HowitworkBtn
-                width="202px"
-                color="#009379"
-                fontSize="16px"
-                text="How it works"
+              border: "2px blue solid",
+            }}
+          >
+            <Flex align={"center"} className={styles.landingpage}>
+              <Image
+                style={{ marginRight: "6px" }}
+                src="/Logo Mark.svg"
+                width={32}
+                height={32}
               />
-              <GetstartBtn />
+              <p className={styles.landing}> Landing</p>
+              Page
+            </Flex>
+            <Flex align={"center"} gap={"50px"}>
+              <Button type="text" style={{ color: "#009379" }}>
+                Contact
+              </Button>
+              <Flex gap={"20px"}>
+                <HowitworkBtn
+                  width="202px"
+                  color="#009379"
+                  fontSize="16px"
+                  text="How it works"
+                />
+                <GetstartBtn getStartIcon="rocket" />
+              </Flex>
             </Flex>
           </Flex>
-        </Flex>
-      </Header>
+        )}
+      </div>
     </>
   )
 }

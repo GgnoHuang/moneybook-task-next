@@ -5,7 +5,7 @@ const { Header } = Layout
 import { Button } from "antd"
 import useStore from "../../zustandStore"
 
-export default function GetstartBtn() {
+export default function GetstartBtn({ getStartIcon }) {
   const { isMobileW } = useStore((state) => ({
     isMobileW: state.isMobileW,
   }))
@@ -25,13 +25,23 @@ export default function GetstartBtn() {
         }}
         type="primary"
       >
-        <Image
-          style={{ marginRight: "8px" }}
-          src="/RocketLaunch.svg"
-          width={20}
-          height={20}
-        />
+        {getStartIcon == "rocket" && (
+          <Image
+            style={{ marginRight: "8px" }}
+            src="/RocketLaunch.svg"
+            width={20}
+            height={20}
+          />
+        )}
         Get Started
+        {getStartIcon == "arrow" && (
+          <Image
+            style={{ marginLeft: "8px" }}
+            src="/ArrowRight.png"
+            width={20}
+            height={20}
+          />
+        )}
       </Button>
     </>
   )
