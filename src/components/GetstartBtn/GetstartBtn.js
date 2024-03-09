@@ -27,6 +27,7 @@ export default function GetstartBtn({ getStartIcon }) {
       >
         {getStartIcon == "rocket" && (
           <Image
+            alt="example"
             style={{ marginRight: "8px" }}
             src="/RocketLaunch.svg"
             width={20}
@@ -36,6 +37,7 @@ export default function GetstartBtn({ getStartIcon }) {
         Get Started
         {getStartIcon == "arrow" && (
           <Image
+            alt="example"
             style={{ marginLeft: "8px" }}
             src="/ArrowRight.png"
             width={20}

@@ -3,21 +3,22 @@ import Image from "next/image"
 import { Layout } from "antd"
 const { Header } = Layout
 
-// import styles from "./GetstartBtn.module.css"
+// import styles from "./UsualBtn.module.css"
 
 import { Button, Flex, ConfigProvider, Space } from "antd"
 
 import useStore from "../../zustandStore"
 
-export default function GetstartBtn({ textcontent, imgSrc }) {
+export default function GetstartBtn({ textcontent, imgSrc, width = "275px" }) {
   const { isMobileW } = useStore((state) => ({
     isMobileW: state.isMobileW,
   }))
   return (
     <>
       <Button
+        // className={styles.btn}
         style={{
-          width: "275px",
+          width: width,
           height: "90px",
           fontSize: "21px",
           lineHeight: "31.5px",
@@ -41,7 +42,7 @@ export default function GetstartBtn({ textcontent, imgSrc }) {
               borderRadius: "12.2px",
             }}
           >
-            <Image src={imgSrc} width={25.61} height={25.61} />
+            <Image alt="example" src={imgSrc} width={25.61} height={25.61} />
           </Flex>
           {textcontent}
         </Flex>

@@ -20,6 +20,7 @@ export default function HeaderComponent() {
         {isMobileW ? (
           <div className={styles.mobileHeader}>
             <Image
+              alt="example"
               style={{ marginRight: "6px" }}
               src="/Logo Mark.svg"
               width={32}
@@ -40,6 +41,7 @@ export default function HeaderComponent() {
           >
             <Flex align={"center"} className={styles.landingpage}>
               <Image
+                alt="example"
                 style={{ marginRight: "6px" }}
                 src="/Logo Mark.svg"
                 width={32}
