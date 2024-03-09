@@ -34,15 +34,18 @@ export default function CardBox() {
       theme={{
         components: {
           Button: {},
+          Card: {},
         },
       }}
     >
       <Card
         hoverable
         style={{
+          boxShadow: " 0px 10px 21px 0px #e0e5ff",
           borderRadius: "20px",
           width: isMobileW ? "315px" : "370px",
           height: isMobileW ? "446px" : "454px",
+          fontSize: 21,
         }}
         cover={
           <Image
@@ -59,7 +62,8 @@ export default function CardBox() {
       >
         <Flex vertical={true}>
           <Meta title="Project Title" description="Short Description" />
-          <Meta description="Category" />
+          {/* <br></br> */}
+          {/* <Meta description="Category" /> */}
         </Flex>
       </Card>
     </ConfigProvider>
