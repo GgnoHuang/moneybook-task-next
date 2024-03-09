@@ -45,7 +45,7 @@ export default function Home() {
           <HeaderComponent />
           <Content1 />
           <Content2 />
-          {/* <Content3 /> */}
+          <Content3 />
           {/* <Content4 /> */}
         </Layout>
       </Flex>

@@ -1,14 +1,27 @@
 .main {
-  border: 0px rgb(14, 255, 62) solid;
   height: 847px;
   background-color: #f8f9ff;
+}
+
+@media (max-width: 375px) {
+  .main {
+    height: 1665px;
+  }
+}
+
+.textBox {
+  height: 93px;
+}
+@media (max-width: 375px) {
+  .textBox {
+    height: 117px;
+  }
 }
 
 .slogan {
   margin: 0px;
   font-size: 38px;
   font-weight: 700;
-  border: 0px red solid;
   align-self: center;
   line-height: 49.4px;
 }
@@ -16,6 +29,10 @@
   align-self: center;
   font-size: 16px;
   font-weight: 400;
-  border: 0px red solid;
   line-height: 24px;
+}
+@media (max-width: 375px) {
+  .text {
+    width: 315px;
+  }
 }
