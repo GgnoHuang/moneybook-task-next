@@ -13,38 +13,36 @@ export default function Content3() {
     isMobileW: state.isMobileW,
   }))
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Button: {},
-        },
-      }}
-    >
+    <div>
       <Flex
         justify={"center"}
         align={"center"}
         vertical={true}
         className={styles.main}
-        gap={"60px"}
+        gap={"30px"}
       >
         <Flex
-          justify={"center"}
+          justify={"space-between"}
           vertical={true}
-          style={{ border: "0px yellow solid", height: "93px" }}
+          className={styles.textBox}
         >
-          <p className={styles.slogan}>Discover our latest work</p>
+          {isMobileW ? (
+            <p className={styles.slogan}>Selected Works</p>
+          ) : (
+            <p className={styles.slogan}>Discover our latest work</p>
+          )}
           <p className={styles.text}>
             Explore our portfolio and see the latest and greatest projects that
             we've brought to life.
           </p>
         </Flex>
 
-        <Flex gap="30px">
+        <Flex gap="30px" vertical={isMobileW ? true : false}>
           <CardBox />
           <CardBox />
           <CardBox />
         </Flex>
       </Flex>
-    </ConfigProvider>
+    </div>
   )
 }
