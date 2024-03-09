@@ -1,5 +1,5 @@
 .header {
-  border: 2px red solid;
+  /* border: 2px red solid; */
 
   padding: 0px 20px;
   height: 100px;
@@ -9,14 +9,14 @@
   line-height: 27.3px;
   font-size: 21px;
   font-weight: 400;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 .landing {
   font-weight: 700;
 }
 
 .mobileHeader {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   display: flex;
   align-items: center;
   height: 100%;

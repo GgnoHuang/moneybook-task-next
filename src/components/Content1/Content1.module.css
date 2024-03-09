@@ -9,7 +9,7 @@
 @media (max-width: 375px) {
   .content1 {
     align-items: start;
-    border: 6px rgb(63, 151, 54) solid;
+    /* border: 6px rgb(63, 151, 54) solid; */
     padding-top: 60px;
     height: 852px;
   }
@@ -21,7 +21,7 @@
 .content {
   width: 1170px;
   height: 450px;
-  border: 2px rgb(26, 244, 255) solid;
+  /* border: 2px rgb(26, 244, 255) solid; */
   position: relative;
 }
 
@@ -35,7 +35,7 @@
   margin: 0px;
   font-size: 67px;
   font-weight: 700;
-  border: 1px red solid;
+  /* border: 1px red solid; */
   color: #2d2d2d;
 }
 
@@ -55,7 +55,7 @@
   margin: 20px 0px 40px 0px;
   font-size: 21px;
   line-height: 31.5px;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 @media (max-width: 375px) {
   .text {
@@ -66,7 +66,7 @@
     width: 315px;
   }
   .btnsContainer {
-    border: 1px red solid;
+    /* border: 1px red solid; */
     flex-direction: column;
     align-items: center;
   }

@@ -2,7 +2,7 @@
   background-color: #f8f9ff;
   height: 690px;
   z-index: 200;
-  border: 4px rgb(255, 0, 251) solid;
+  /* border: 4px rgb(255, 0, 251) solid; */
 }
 
 @media (max-width: 375px) {
@@ -47,13 +47,13 @@
   font-size: 38px;
   font-weight: 700;
   line-height: 49.4px;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 .slogan2 {
   margin: 20px 0px 40px 0px;
   font-size: 21px;
   line-height: 31.5px;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 @media (max-width: 375px) {
