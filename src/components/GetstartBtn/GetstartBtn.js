@@ -2,11 +2,13 @@ import Image from "next/image"
 import { Layout } from "antd"
 const { Header } = Layout
 
-// import styles from "./GetstartBtn.module.css"
-
-import { Button, Flex, ConfigProvider, Space } from "antd"
+import { Button } from "antd"
+import useStore from "../../zustandStore"
 
 export default function GetstartBtn() {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   return (
     <>
       <Button

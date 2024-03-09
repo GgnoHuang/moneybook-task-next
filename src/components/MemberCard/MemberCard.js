@@ -7,12 +7,17 @@ import styles from "./MemberCard.module.css"
 import { Image as AntdImage } from "antd"
 import { space } from "postcss/lib/list"
 
+import useStore from "../../zustandStore"
+
 export default function MemberCard({
   memberName,
   memberPosition,
   rate,
   imgsrc,
 }) {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   const [image, setImage] = useState(null)
   useEffect(() => {
     const headers = new Headers({

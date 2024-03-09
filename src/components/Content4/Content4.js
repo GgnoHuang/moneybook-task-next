@@ -2,13 +2,14 @@
 import { Layout, Button, Flex, ConfigProvider, Space, Card } from "antd"
 const { Meta } = Card
 
-import GetstartBtn from "../GetstartBtn/GetstartBtn"
-import CardBox from "../CardBox/CardBox"
-
 import styles from "./Content4.module.css"
 import MemberCard from "../MemberCard/MemberCard"
+import useStore from "../../zustandStore"
 
 export default function Content4() {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   return (
     <ConfigProvider
       theme={{

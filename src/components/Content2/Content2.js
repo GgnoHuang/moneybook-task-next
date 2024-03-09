@@ -11,7 +11,12 @@ import styles from "./Content2.module.css"
 import UsualBtn from "../UsualBtn/UsualBtn"
 import Iphone from "../Iphone/Iphone"
 
+import useStore from "../../zustandStore"
+
 export default function Content2() {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   const [image, setImage] = useState(null)
   useEffect(() => {
     const headers = new Headers({
@@ -84,7 +89,6 @@ export default function Content2() {
             />
           </Flex>
         </Flex>
-        {/* <Iphone /> */}
       </Flex>
     </Flex>
   )

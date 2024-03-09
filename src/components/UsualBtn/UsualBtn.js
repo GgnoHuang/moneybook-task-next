@@ -7,7 +7,12 @@ const { Header } = Layout
 
 import { Button, Flex, ConfigProvider, Space } from "antd"
 
+import useStore from "../../zustandStore"
+
 export default function GetstartBtn({ textcontent, imgSrc }) {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   return (
     <>
       <Button

@@ -1,13 +1,17 @@
 // "use client"
-import { Layout, Button, Flex, ConfigProvider, Space, Card } from "antd"
+import { Flex, ConfigProvider, Card } from "antd"
 const { Meta } = Card
 
-import GetstartBtn from "../GetstartBtn/GetstartBtn"
 import CardBox from "../CardBox/CardBox"
 
 import styles from "./Content3.module.css"
 
+import useStore from "../../zustandStore"
+
 export default function Content3() {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   return (
     <ConfigProvider
       theme={{
