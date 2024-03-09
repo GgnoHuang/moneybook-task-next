@@ -21,6 +21,20 @@ export default function Iphone({
         transform: transform,
       }}
     >
+      <div className={styles.iphoneBtn} style={{}}></div>
+      <div
+        className={styles.iphoneBtn}
+        style={{ top: " 112.31px", height: "52.72px" }}
+      ></div>
+      <div
+        className={styles.iphoneBtn}
+        style={{ top: "173.43px", height: "52.72px" }}
+      ></div>
+      <div
+        className={styles.iphoneBtn}
+        style={{ top: "115.36px", left: "361px", height: "72.58px" }}
+      ></div>
+
       <div className={styles.iphonebody}>
         <div className={styles.dynamicIsland}>
           <div className={styles.earpiece}></div>
@@ -33,6 +47,7 @@ export default function Iphone({
             style={{
               objectFit: "cover",
               height: "557px",
+              minWidth: "207px",
             }}
           />
         </div>

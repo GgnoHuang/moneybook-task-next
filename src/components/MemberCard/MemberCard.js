@@ -14,6 +14,7 @@ export default function MemberCard({
   memberPosition,
   rate,
   imgsrc,
+  comment,
 }) {
   const { isMobileW } = useStore((state) => ({
     isMobileW: state.isMobileW,
@@ -91,11 +92,7 @@ export default function MemberCard({
               />
             )}
 
-            <p className={styles.comment}>
-              "Anima’s Landing Page UI Kit has become a staple in my design
-              toolkit. This kit has everything I need to get the job done
-              quickly and efficiently."
-            </p>
+            <p className={styles.comment}>{comment}</p>
 
             {isMobileW && (
               <Rate

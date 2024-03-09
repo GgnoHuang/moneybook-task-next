@@ -4,6 +4,7 @@
   justify-content: center;
   position: relative;
   /* border: red solid 2px; */
+
   z-index: 10;
   width: 450px;
 }
@@ -15,8 +16,19 @@
   .iphonebody {
     position: relative;
     top: 17px;
-    border: 1px #d8d8d8 solid;
   }
+}
+
+.iphoneBtn {
+  position: absolute;
+  top: 74.1px;
+  left: 68.5px;
+  width: 19.21px;
+  height: 23.68px;
+  /* background-color: #ffffff; */
+  background-color: #726f6f;
+  border-radius: 3.93px;
+  z-index: -1;
 }
 
 .shine {
@@ -31,6 +43,7 @@
 }
 
 .iphonebody {
+  border: 1px #d8d8d8 solid;
   width: 304px;
   height: 581px;
   background-color: #2d2d2d;
@@ -86,6 +99,5 @@
   height: 420px;
   background-color: #ffffff;
   border-radius: 127px;
-  z-index: -1;
-  border: red 0px solid;
+  z-index: -2;
 }

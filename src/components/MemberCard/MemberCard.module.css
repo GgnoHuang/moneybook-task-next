@@ -54,6 +54,9 @@
 }
 @media (max-width: 375px) {
   .comment {
+    width: 251px;
+    align-self: center;
+
     text-align: center;
   }
   .stars {
