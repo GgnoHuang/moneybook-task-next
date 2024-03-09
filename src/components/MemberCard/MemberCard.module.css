@@ -6,9 +6,15 @@
   border: 1px solid #e5f4f2;
 }
 
+@media (max-width: 375px) {
+  .cardBody {
+    width: 311px;
+    height: 468px;
+  }
+}
+
 .infoCard {
   width: 180px;
-  border: 0px solid #0fffdf;
   height: fit-content;
 }
 
@@ -20,7 +26,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-family: ; */
 }
 .memberPosition {
   color: #374151;
@@ -34,16 +39,24 @@
 }
 
 .rating {
-  border: 0px red solid;
   width: 280px;
-  height: fit-content;
 }
 
 .comment {
+  margin: 0px;
+
   color: #2d2d2d;
-  font-size: 16px;
+
   font-weight: 400;
 
   line-height: 24px;
   overflow-wrap: break-word;
+}
+@media (max-width: 375px) {
+  .comment {
+    text-align: center;
+  }
+  .stars {
+    justify-content: center;
+  }
 }

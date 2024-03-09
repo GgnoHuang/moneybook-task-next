@@ -8,7 +8,7 @@
 @media (max-width: 375px) {
   .content2body {
     height: 1082px;
-
+    width: 375px;
     padding-top: 44px;
   }
 }

@@ -40,12 +40,14 @@ export default function CardBox() {
       <Card
         hoverable
         style={{
+          borderRadius: "20px",
           width: isMobileW ? "315px" : "370px",
           height: isMobileW ? "446px" : "454px",
         }}
         cover={
           <Image
             style={{
+              borderRadius: "20px 20px 0px 0px",
               overflow: "hidden",
               height: "278px",
               objectFit: "cover",

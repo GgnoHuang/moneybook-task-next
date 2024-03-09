@@ -11,31 +11,30 @@ export default function Content4() {
     isMobileW: state.isMobileW,
   }))
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Button: {},
-        },
-      }}
-    >
+    <div>
       <Flex
         justify={"center"}
         align={"center"}
         vertical={true}
         className={styles.main}
-        gap={"60px"}
+        gap={60}
       >
         <Flex
-          justify={"center"}
+          // justify={"center"}
+          justify={isMobileW ? "space-between" : "center"}
           vertical={true}
-          style={{ border: "0px yellow solid", height: "93px" }}
+          className={styles.sloganContain}
         >
-          <p className={styles.slogan}>Real Stories from Satisfied Customers</p>
+          <p className={styles.slogan}>
+            Real Stories
+            {isMobileW && <br />}
+            from Satisfied Customers
+          </p>
           <p className={styles.text}>
             See how our landing page ui kit is making an impact.
           </p>
         </Flex>
-        <Flex gap={30}>
+        <Flex gap={60} vertical={isMobileW ? true : false}>
           <MemberCard
             imgsrc={"/member_1.png"}
             memberName="Lauren M."
@@ -48,6 +47,6 @@ export default function Content4() {
           />
         </Flex>
       </Flex>
-    </ConfigProvider>
+    </div>
   )
 }
