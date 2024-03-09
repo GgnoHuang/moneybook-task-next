@@ -23,6 +23,7 @@ export default function CardBox() {
     })
       .then((response) => response.json())
       .then((result) => {
+        // console.log(result)
         setImage(result[0].url)
       })
       .catch((error) => {
@@ -30,14 +31,7 @@ export default function CardBox() {
       })
   }, [])
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Button: {},
-          Card: {},
-        },
-      }}
-    >
+    <ConfigProvider theme={{}}>
       <Card
         hoverable
         style={{
@@ -56,7 +50,7 @@ export default function CardBox() {
               objectFit: "cover",
             }}
             alt="example"
-            src={image}
+            src={image ? image : "/bar.gif"}
           />
         }
       >
