@@ -67,7 +67,7 @@ export default function Content1() {
             vertical={true}
             style={{
               width: isMobileW ? "375px" : "620px",
-              border: "3px blue solid",
+              // border: "3px blue solid",
             }}
           >
             <p style={{}} className={styles.slogan}>

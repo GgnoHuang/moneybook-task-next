@@ -36,7 +36,7 @@ export default function HeaderComponent() {
             style={{
               height: "100%",
 
-              border: "2px blue solid",
+              // border: "2px blue solid",
             }}
           >
             <Flex align={"center"} className={styles.landingpage}>
