@@ -33,6 +33,7 @@
 }
 @media (max-width: 375px) {
   .text {
+    text-align: center;
     width: 315px;
   }
 }

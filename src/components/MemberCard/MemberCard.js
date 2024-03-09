@@ -39,15 +39,18 @@ export default function MemberCard({
   }, [])
 
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Button: {},
-        },
-      }}
-    >
+    <div>
       <Flex className={styles.cardBody} align={"center"} justify={"center"}>
-        <Flex align={"center"}>
+        <Flex
+          align={"center"}
+          gap={30}
+          vertical={isMobileW ? true : false}
+          style={
+            {
+              // border: "2px solid red",
+            }
+          }
+        >
           <Flex
             vertical={true}
             align={"center"}
@@ -64,22 +67,48 @@ export default function MemberCard({
               alt="example"
               src={image ? image : imgsrc}
             />
-            <Flex justify={"center"} vertical={true}>
+            <Flex justify={"center"} vertical={true} gap={6}>
               <span className={styles.memberName}>{memberName}</span>
               <span className={styles.memberPosition}>{memberPosition}</span>
             </Flex>
           </Flex>
 
-          <Flex className={styles.rating} vertical={true} justify={"center"}>
-            <Rate allowHalf value={4.5} />
+          <Flex
+            className={styles.rating}
+            vertical={true}
+            justify={"center"}
+            gap={24}
+          >
+            {!isMobileW && (
+              <Rate
+                className={styles.stars}
+                style={{
+                  display: "flex",
+                }}
+                allowHalf
+                value={4.5}
+              />
+            )}
+
             <p className={styles.comment}>
               "Anima’s Landing Page UI Kit has become a staple in my design
               toolkit. This kit has everything I need to get the job done
               quickly and efficiently."
             </p>
+
+            {isMobileW && (
+              <Rate
+                className={styles.stars}
+                style={{
+                  display: "flex",
+                }}
+                allowHalf
+                value={3.5}
+              />
+            )}
           </Flex>
         </Flex>
       </Flex>
-    </ConfigProvider>
+    </div>
   )
 }

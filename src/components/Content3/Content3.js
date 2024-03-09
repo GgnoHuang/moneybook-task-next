@@ -32,8 +32,8 @@ export default function Content3() {
             <p className={styles.slogan}>Discover our latest work</p>
           )}
           <p className={styles.text}>
-            Explore our portfolio and see the latest and greatest projects that
-            we've brought to life.
+            Explore our portfolio and see the latest projects that we've brought
+            to life.
           </p>
         </Flex>
 

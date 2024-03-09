@@ -1,7 +1,24 @@
 .main {
-  border: 0px rgb(14, 255, 62) solid;
+  /* border: 3px rgb(174, 11, 11) solid; */
   height: 664px;
   background-color: #f8d57e;
+}
+@media (max-width: 375px) {
+  .main {
+    height: 1471px;
+  }
+}
+
+.sloganContain {
+  height: 93px;
+
+  /* border: 3px red solid; */
+}
+@media (max-width: 375px) {
+  .sloganContain {
+    height: 215px;
+    width: 311px;
+  }
 }
 
 .slogan {
@@ -18,4 +35,15 @@
   font-weight: 400;
   border: 0px red solid;
   line-height: 24px;
+  /* margin: 0px; */
+}
+
+@media (max-width: 375px) {
+  .main {
+    height: 1471px;
+  }
+  .text,
+  .slogan {
+    text-align: center;
+  }
 }
