@@ -18,6 +18,8 @@ export default function GetstartBtn({ textcontent, imgSrc, width = "275px" }) {
       <Button
         // className={styles.btn}
         style={{
+          boxShadow: " 0px 10px 21px 0px #e0e5ff",
+
           width: width,
           height: "90px",
           fontSize: "21px",
