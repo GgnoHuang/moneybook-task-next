@@ -22,12 +22,14 @@ export default function IphoneForContent1({
       }}
     >
       <Image
+        alt="example"
         className={styles.shine}
         width={39.2}
         height={49}
         src={"/deepRedShine.png"}
       />
       <Image
+        alt="example"
         className={styles.shineWhite}
         width={39.2}
         height={49}

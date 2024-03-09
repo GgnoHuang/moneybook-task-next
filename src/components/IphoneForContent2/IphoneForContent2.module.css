@@ -1,0 +1,34 @@
+@media (max-width: 375px) {
+  .iphoneContainer {
+    top: -90px;
+  }
+}
+
+.iphoneContainer {
+  /* background-color: red; */
+  border: 2px rgb(26, 194, 4) solid;
+  width: 540px;
+  height: 450px;
+  position: relative;
+}
+.iphoneBgCircle {
+  border-radius: 50%;
+  background-color: #f8d57e;
+  width: 378.63px;
+  height: 378.63px;
+  position: absolute;
+  left: 91px;
+  top: 32.57px;
+}
+.shine {
+  z-index: 50;
+  position: absolute;
+  top: 96px;
+  left: 41px;
+}
+.shineWhite {
+  z-index: 50;
+  position: absolute;
+  top: 241px;
+  left: 405px;
+}

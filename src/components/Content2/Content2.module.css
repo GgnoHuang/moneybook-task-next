@@ -1,15 +1,20 @@
 .content2body {
   background-color: #f8f9ff;
   height: 690px;
-  z-index: 222;
-}
-/* styles/Content2.module.css */
-.content2body {
+  z-index: 200;
+  border: 4px rgb(255, 0, 251) solid;
 }
 
-.iphoneContainer {
-  /* background-color: red; */
-  border: 0px rgb(26, 194, 4) solid;
+@media (max-width: 375px) {
+  .content2body {
+    height: 1082px;
+
+    padding-top: 44px;
+  }
+}
+
+/* .iphoneContainer {
+  border: 2px rgb(0, 0, 0) solid;
   width: 540px;
   height: 450px;
   position: relative;
@@ -35,24 +40,28 @@
   position: absolute;
   top: 241px;
   left: 405px;
-}
-
-.verticalContainer {
-  width: 570px;
-  border: 0px blue solid;
-}
+} */
 
 .slogan {
   margin: 0px;
   font-size: 38px;
   font-weight: 700;
   line-height: 49.4px;
-  border: 0px red solid;
+  border: 1px red solid;
 }
-
 .slogan2 {
   margin: 20px 0px 40px 0px;
   font-size: 21px;
   line-height: 31.5px;
-  border: 0px red solid;
+  border: 1px red solid;
+}
+
+@media (max-width: 375px) {
+  .slogan {
+    text-align: center;
+  }
+  .slogan2 {
+    margin: 20px 0px 50px 0px;
+    text-align: center;
+  }
 }

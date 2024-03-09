@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from "react"
 
 // "use client"
@@ -52,12 +53,7 @@ export default function Content1() {
 
   return (
     <>
-      <Content
-        className={styles.content1}
-        style={{
-          height: isMobileW ? "852px" : "570px",
-        }}
-      >
+      <Content className={styles.content1}>
         <Flex
           className={styles.content}
           justify={"space-between"}
@@ -82,7 +78,7 @@ export default function Content1() {
               Page UI kit for Figma. No code required!
             </p>
             <Flex gap="18px" className={styles.btnsContainer}>
-              <GetstartBtn />
+              <GetstartBtn getStartIcon="rocket" />
               <HowitworkBtn
                 text={"How it works"}
                 width="202px"
