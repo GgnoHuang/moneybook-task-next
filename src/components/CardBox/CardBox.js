@@ -4,8 +4,12 @@ import { Layout, Button, Flex, ConfigProvider, Space, Card } from "antd"
 const { Meta } = Card
 import { Image } from "antd"
 import styles from "./CardBox.module.css"
+import useStore from "../../zustandStore"
 
 export default function CardBox() {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   const [image, setImage] = useState(null)
   useEffect(() => {
     const headers = new Headers({

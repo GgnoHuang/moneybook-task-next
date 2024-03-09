@@ -8,8 +8,12 @@ import styles from "./HeaderComponent.module.css"
 import { Button, Flex, ConfigProvider, Space } from "antd"
 import GetstartBtn from "../GetstartBtn/GetstartBtn"
 import HowitworkBtn from "../HowitworkBtn/HowitworkBtn"
+import useStore from "../../zustandStore"
 
 export default function HeaderComponent() {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   return (
     <>
       <Header

@@ -5,6 +5,8 @@ const { Header } = Layout
 
 import { Button, Flex, ConfigProvider, Space } from "antd"
 
+import useStore from "../../zustandStore"
+
 export default function HowitworkBtn({
   text,
   width = "202px",
@@ -13,6 +15,9 @@ export default function HowitworkBtn({
   fontSize,
   border = "0px",
 }) {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   return (
     <>
       <ConfigProvider
@@ -30,7 +35,9 @@ export default function HowitworkBtn({
         <Button
           type="primary"
           style={{
-            width: width,
+            width: isMobileW ? "221px" : width,
+
+            // width: width,
             height: "60px",
 
             fontSize: fontSize,

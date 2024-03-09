@@ -1,10 +1,10 @@
 import Image from "next/image"
-import styles from "./Iphone.module.css"
+import styles from "./IphoneForContent1.module.css"
 import { Image as AntdImage } from "antd"
 
 import useStore from "../../zustandStore"
 
-export default function Iphone({
+export default function IphoneForContent1({
   transform = "scale(1)",
   display,
   top,
@@ -21,6 +21,19 @@ export default function Iphone({
         transform: transform,
       }}
     >
+      <Image
+        className={styles.shine}
+        width={39.2}
+        height={49}
+        src={"/deepRedShine.png"}
+      />
+      <Image
+        className={styles.shineWhite}
+        width={39.2}
+        height={49}
+        src={"/shineWhite.png"}
+      />
+
       <div className={styles.iphonebody}>
         <div className={styles.dynamicIsland}>
           <div className={styles.earpiece}></div>

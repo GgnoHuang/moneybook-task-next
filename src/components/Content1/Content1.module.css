@@ -1,4 +1,4 @@
-.contnet1 {
+.content1 {
   background-color: #f8d57e;
   height: 570px;
   display: flex;
@@ -6,39 +6,67 @@
   justify-content: center;
   overflow: hidden;
 }
+@media (max-width: 375px) {
+  .content1 {
+    align-items: start;
+    border: 6px rgb(63, 151, 54) solid;
+    padding-top: 60px;
+  }
+  .content {
+    height: 792px;
+  }
+}
 
-.contnet {
+.content {
   width: 1170px;
-
   height: 450px;
-  border: 0px rgb(26, 255, 0) solid;
+  border: 2px rgb(26, 244, 255) solid;
   position: relative;
 }
+
+@media (max-width: 375px) {
+  .content {
+    height: 792px;
+  }
+}
 .slogan {
+  line-height: 87px;
   margin: 0px;
   font-size: 67px;
   font-weight: 700;
-  border: 0px red solid;
+  border: 1px red solid;
   color: #2d2d2d;
 }
 
+@media (max-width: 375px) {
+  .slogan {
+    line-height: 49.4px;
+    font-size: 38px;
+    text-align: center;
+    width: 315px;
+    height: 147px;
+    align-self: center;
+  }
+  .sloganContainer {
+  }
+}
 .text {
   margin: 20px 0px 40px 0px;
   font-size: 21px;
-  border: 0px red solid;
   line-height: 31.5px;
+  border: 1px red solid;
 }
-
-.shine {
-  z-index: 50;
-  position: absolute;
-
-  top: 290px;
-  right: 26px;
-}
-.shineWhite {
-  z-index: 50;
-  position: absolute;
-  top: 120px;
-  right: 401px;
+@media (max-width: 375px) {
+  .text {
+    align-self: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    width: 315px;
+  }
+  .btnsContainer {
+    border: 1px red solid;
+    flex-direction: column;
+    align-items: center;
+  }
 }

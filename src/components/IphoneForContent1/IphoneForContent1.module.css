@@ -1,0 +1,91 @@
+/* styles/Iphone.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: red solid 2px;
+  z-index: 10;
+  width: 450px;
+}
+@media (max-width: 375px) {
+  .container {
+    align-self: center;
+    top: 222px;
+  }
+  .iphonebody {
+    position: relative;
+    top: 17px;
+    border: 1px #d8d8d8 solid;
+  }
+}
+
+.shine {
+  position: absolute;
+  left: 386px;
+  top: 296px;
+}
+.shineWhite {
+  position: absolute;
+  left: 1px;
+  top: 109px;
+}
+
+.iphonebody {
+  width: 304px;
+  height: 581px;
+  background-color: #2d2d2d;
+  border-radius: 53.48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  position: relative;
+}
+
+.dynamicIsland {
+  width: 91.7px;
+  height: 19.86px;
+  background-color: #2d2d2d;
+  border-radius: 50px;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  z-index: 5;
+}
+
+.earpiece {
+  width: 41.26px;
+  height: 3.06px;
+  background-color: #cfcfcf;
+  border-radius: 25px;
+  position: relative;
+}
+
+.camera {
+  width: 3.06px;
+  height: 3.06px;
+  background-color: #cfcfcf;
+  border-radius: 50%;
+  position: relative;
+}
+
+.iphoneScreen {
+  border-radius: 45.84px;
+  overflow: hidden;
+  width: 281.19px;
+  height: 557.72px;
+}
+
+.iphoneBGwhite {
+  position: absolute;
+  top: 169px;
+  width: 420px;
+  height: 420px;
+  background-color: #ffffff;
+  border-radius: 127px;
+  z-index: -1;
+  border: red 0px solid;
+}

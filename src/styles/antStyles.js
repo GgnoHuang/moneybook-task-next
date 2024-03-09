@@ -1,16 +1,8 @@
-const layoutStyle = {
-  // borderRadius: 8,
-  // overflow: "hidden",
-  // width: "calc(50% - 0px)",
-  // maxWidth: "calc(50% - 8px)",
-}
+const layoutStyle = {}
 
 const headerStyle = {
   textAlign: "center",
-  // color: "#fff",
-  height: 100,
-  // paddingInline: 48,
-  // lineHeight: "64px",
+
   backgroundColor: "#F8D57E",
 }
 const contentStyle = {

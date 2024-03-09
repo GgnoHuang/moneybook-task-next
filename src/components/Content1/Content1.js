@@ -12,8 +12,14 @@ import styles from "./Content1.module.css"
 import GetstartBtn from "../GetstartBtn/GetstartBtn"
 import HowitworkBtn from "../HowitworkBtn/HowitworkBtn"
 import Iphone from "../Iphone/Iphone"
+import IphoneForContent1 from "../IphoneForContent1/IphoneForContent1"
+
+import useStore from "../../zustandStore"
 
 export default function Content1() {
+  const { isMobileW } = useStore((state) => ({
+    isMobileW: state.isMobileW,
+  }))
   const [image, setImage] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -46,33 +52,36 @@ export default function Content1() {
 
   return (
     <>
-      <Content className={styles.contnet1} style={{ border: "0px red solid" }}>
-        <Flex className={styles.contnet} justify={"space-between"}>
-          <Image
-            className={styles.shine}
-            width={39.2}
-            height={49}
-            src={"/deepRedShine.png"}
-          />
-          <Image
-            className={styles.shineWhite}
-            width={39.2}
-            height={49}
-            src={"/shineWhite.png"}
-          />
-
+      <Content
+        className={styles.content1}
+        style={{
+          height: isMobileW ? "852px" : "570px",
+        }}
+      >
+        <Flex
+          className={styles.content}
+          justify={"space-between"}
+          align={isMobileW ? "center" : "space-between"}
+          style={{
+            width: isMobileW ? "375px" : "1170px",
+            flexDirection: isMobileW ? "column" : "",
+          }}
+        >
           <Flex
             vertical={true}
-            style={{ width: "620px", border: "0px blue solid" }}
+            style={{
+              width: isMobileW ? "375px" : "620px",
+              border: "3px blue solid",
+            }}
           >
             <p style={{}} className={styles.slogan}>
-              Create Engaging Landing Pages
+              Create {isMobileW && <br />} Engaging Landing Pages
             </p>
             <p style={{}} className={styles.text}>
               Build beautiful landing pages in record time with Anima’s Landing
               Page UI kit for Figma. No code required!
             </p>
-            <Flex gap="18px">
+            <Flex gap="18px" className={styles.btnsContainer}>
               <GetstartBtn />
               <HowitworkBtn
                 text={"How it works"}
@@ -83,10 +92,13 @@ export default function Content1() {
                 border="1px #009379 solid"
               />
             </Flex>
-            {/* <Iphone /> */}
           </Flex>
-          <Iphone top="24px" fetchImg={image} />
-          {/* <Iphone transform="scale(0.733)" display={"none"} /> */}
+
+          <IphoneForContent1
+            fetchImg={image}
+            top={isMobileW ? "-55px" : "24px"}
+            transform={isMobileW ? "scale(0.7)" : "scale(1)"}
+          />
         </Flex>
       </Content>
     </>
