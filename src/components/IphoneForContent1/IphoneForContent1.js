@@ -44,10 +44,10 @@ export default function IphoneForContent1({
         <div className={styles.iphoneScreen} style={{}}>
           <AntdImage
             alt="example"
-            src={fetchImg}
+            src={fetchImg ? fetchImg : "/loadingText.gif"}
             style={{
+              objectFit: "cover",
               height: "557px",
-              width: "auto",
             }}
           />
         </div>

@@ -36,12 +36,12 @@ export default function Content4() {
         </Flex>
         <Flex gap={60} vertical={isMobileW ? true : false}>
           <MemberCard
-            imgsrc={"/member_1.png"}
+            imgsrc={"/loading.gif"}
             memberName="Lauren M."
             memberPosition="UI Designer @Boo"
           />
           <MemberCard
-            imgsrc={"/member_2.png"}
+            imgsrc={"/loading.gif"}
             memberName="David B."
             memberPosition="Lead Designer @Creative"
           />

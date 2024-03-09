@@ -63,6 +63,7 @@ export default function MemberCard({
               style={{
                 borderRadius: "50%",
                 border: "0px solid red",
+                objectFit: "cover",
               }}
               alt="example"
               src={image ? image : imgsrc}
