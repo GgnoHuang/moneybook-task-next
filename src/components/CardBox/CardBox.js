@@ -5,31 +5,14 @@ const { Meta } = Card
 import { Image } from "antd"
 import styles from "./CardBox.module.css"
 import useStore from "../../zustandStore"
+import { useFetchImg } from "../../hooks/useFetchImg"
 
 export default function CardBox() {
   const { isMobileW } = useStore((state) => ({
     isMobileW: state.isMobileW,
   }))
-  const [image, setImage] = useState(null)
-  useEffect(() => {
-    const headers = new Headers({
-      "Content-Type": "application/json",
-      "x-api-key": "DEMO-API-KEY",
-    })
-    fetch("https://api.thecatapi.com/v1/images/search", {
-      method: "GET",
-      headers: headers,
-      redirect: "follow",
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        // console.log(result)
-        setImage(result[0].url)
-      })
-      .catch((error) => {
-        console.log("error", error)
-      })
-  }, [])
+  const { image } = useFetchImg()
+
   return (
     <ConfigProvider theme={{}}>
       <Card
@@ -56,8 +39,7 @@ export default function CardBox() {
       >
         <Flex vertical={true}>
           <Meta title="Project Title" description="Short Description" />
-          {/* <br></br> */}
-          {/* <Meta description="Category" /> */}
+          <Meta description="Category" />
         </Flex>
       </Card>
     </ConfigProvider>

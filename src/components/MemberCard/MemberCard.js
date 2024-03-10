@@ -8,6 +8,7 @@ import { Image as AntdImage } from "antd"
 import { space } from "postcss/lib/list"
 
 import useStore from "../../zustandStore"
+import { useFetchImg } from "../../hooks/useFetchImg"
 
 export default function MemberCard({
   memberName,
@@ -16,28 +17,10 @@ export default function MemberCard({
   imgsrc,
   comment,
 }) {
+  const { image } = useFetchImg()
   const { isMobileW } = useStore((state) => ({
     isMobileW: state.isMobileW,
   }))
-  const [image, setImage] = useState(null)
-  useEffect(() => {
-    const headers = new Headers({
-      "Content-Type": "application/json",
-      "x-api-key": "DEMO-API-KEY",
-    })
-    fetch("https://api.thecatapi.com/v1/images/search", {
-      method: "GET",
-      headers: headers,
-      redirect: "follow",
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        setImage(result[0].url)
-      })
-      .catch((error) => {
-        console.log("error", error)
-      })
-  }, [])
 
   return (
     <div>

@@ -1,42 +1,20 @@
 import React, { useState, useEffect } from "react"
 
-// "use client"
 import { Button, Flex, ConfigProvider, Space } from "antd"
-import Image from "next/image"
-
-import { Layout } from "antd"
 
 import styles from "./Content2.module.css"
-
 import UsualBtn from "../UsualBtn/UsualBtn"
-
 import IphoneForContent2 from "../IphoneForContent2/IphoneForContent2"
 
 import useStore from "../../zustandStore"
+import { useFetchImg } from "../../hooks/useFetchImg"
 
 export default function Content2() {
+  const { image } = useFetchImg()
   const { isMobileW } = useStore((state) => ({
     isMobileW: state.isMobileW,
   }))
-  const [image, setImage] = useState(null)
-  useEffect(() => {
-    const headers = new Headers({
-      "Content-Type": "application/json",
-      "x-api-key": "DEMO-API-KEY",
-    })
-    fetch("https://api.thecatapi.com/v1/images/search", {
-      method: "GET",
-      headers: headers,
-      redirect: "follow",
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        setImage(result[0].url)
-      })
-      .catch((error) => {
-        console.log("error", error)
-      })
-  }, [])
+
   return (
     <Flex
       className={styles.content2body}

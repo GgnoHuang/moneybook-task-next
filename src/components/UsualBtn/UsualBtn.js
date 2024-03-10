@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Layout } from "antd"
 const { Header } = Layout
 
-// import styles from "./UsualBtn.module.css"
+import styles from "./UsualBtn.module.css"
 
 import { Button, Flex, ConfigProvider, Space } from "antd"
 
