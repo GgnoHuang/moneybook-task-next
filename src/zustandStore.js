@@ -2,7 +2,7 @@ import { create } from "zustand"
 
 export const useStore = create((set, get) => ({
   isMobileW: false,
-  setIsMobileW: (message) => set({ isMobileW: message }),
+  setIsMobileW: (state) => set({ isMobileW: state }),
 }))
 
 export default useStore

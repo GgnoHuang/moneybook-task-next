@@ -2,55 +2,22 @@
 import React, { useState, useEffect } from "react"
 import Head from "next/head"
 
-// "use client"
-import { Button, Flex, ConfigProvider, Space } from "antd"
-import Image from "next/image"
-
-import { Layout } from "antd"
-
+import { Flex, Layout } from "antd"
 const { Content } = Layout
 
 import styles from "./Content1.module.css"
 import GetstartBtn from "../GetstartBtn/GetstartBtn"
 import HowitworkBtn from "../HowitworkBtn/HowitworkBtn"
-import Iphone from "../Iphone/Iphone"
 import IphoneForContent1 from "../IphoneForContent1/IphoneForContent1"
 
 import useStore from "../../zustandStore"
+import { useFetchImg } from "../../hooks/useFetchImg"
 
 export default function Content1() {
+  const { image } = useFetchImg()
   const { isMobileW } = useStore((state) => ({
     isMobileW: state.isMobileW,
   }))
-  const [image, setImage] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    const headers = new Headers({
-      "Content-Type": "application/json",
-      "x-api-key": "DEMO-API-KEY",
-    })
-
-    const requestOptions = {
-      method: "GET",
-      headers: headers,
-      redirect: "follow",
-    }
-
-    setLoading(true)
-    fetch("https://api.thecatapi.com/v1/images/search", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        setImage(result[0].url)
-        setLoading(false)
-      })
-      .catch((error) => {
-        console.log("error", error)
-        setError(error)
-        setLoading(false)
-      })
-  }, [])
 
   return (
     <>
